@@ -1,6 +1,6 @@
 import openpyxl
 
-from ui import show_scatter
+from ui import show_scatter, show_confusion_matrix
 from kmedoids import k_medoids_clustering
 
 # Ler dados do arquivo .xlsx
@@ -25,3 +25,7 @@ num_clusters = 3
 clusters = k_medoids_clustering(data, num_clusters)
 print(clusters)
 show_scatter(data, clusters)
+
+y_true = [0, 1, 1, 0, 2, 2]
+y_pred = [0, 1, 2, 0, 1, 2]
+show_confusion_matrix(y_true, y_pred)
