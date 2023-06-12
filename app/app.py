@@ -1,5 +1,6 @@
 import openpyxl
 
+from ui import show_scatter
 from kmedoids import k_medoids_clustering
 
 # Ler dados do arquivo .xlsx
@@ -13,6 +14,7 @@ def read_data_from_excel(file_path):
 
     return data
 
+
 # Ler dados do arquivo .xlsx
 file_path = './data.xlsx'
 data = read_data_from_excel(file_path)
@@ -22,3 +24,4 @@ print(data)
 num_clusters = 3
 clusters = k_medoids_clustering(data, num_clusters)
 print(clusters)
+show_scatter(data, clusters)
