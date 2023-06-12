@@ -30,3 +30,13 @@ def show_confusion_matrix(y_true, y_pred):
     plt.xlabel('Classe Preditada')
     plt.ylabel('Classe Real')
     plt.show()
+
+# Gerar visualização da linha de saída para Regressão
+def show_regression(X, y, y_pred):
+    plt.scatter(X, y, color='b', label='Dados reais')
+    plt.plot(X, y_pred, color='r', label='Linha de saída')
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.title('Regressão')
+    plt.legend()
+    plt.show()
