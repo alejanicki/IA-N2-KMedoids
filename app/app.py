@@ -1,4 +1,5 @@
 import openpyxl
+# import csv
 
 from ui import show_scatter, show_confusion_matrix, show_regression
 from kmedoids import k_medoids_clustering
@@ -13,6 +14,15 @@ def read_data_from_excel(file_path):
         data.append(row)
 
     return data
+
+# Ler dados do arquivo CSV
+# def read_data_from_csv(file_path):
+#     data = []
+#     with open(file_path, 'r') as file:
+#         reader = csv.reader(file)
+#         for row in reader:
+#             data.append(row)
+#     return data
 
 
 # Ler dados do arquivo .xlsx
